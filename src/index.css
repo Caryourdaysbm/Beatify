@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+@layer base {
+  .nav-links {
+    @apply rounded-sm hover:bg-gray-200 px-3 lg:px-0 w-full lg:w-fit text-center lg:hover:bg-transparent lg:py-0 py-3;
+  }
+
+  .hidden-class {
+    @apply hidden;
+  }
+
+  h1 span {
+    @apply text-purple-800;
+  }
+
+  .mobile-nav {
+    @apply absolute top-28 right-[50%] z-20 translate-x-[50%] text-xl  items-center flex-col px-10  w-full flex shadow-2xl max-w-[17rem] rounded-lg py-4 border bg-white;
+  }
+
+  .nav-link-container {
+    @apply justify-between items-center lg:text-sm lg:w-3/4 uppercase text-navText  lg:px-0 px-10 lg:flex w-full lg:translate-x-0 lg:relative lg:top-0  lg:right-0 lg:flex-row;
+  }
+
+  nav {
+    @apply max-w-6xl mx-auto px-10 py-2 justify-between flex items-center;
+  }
+
+  .nav-icons {
+    @apply text-4xl text-black lg:hidden cursor-pointer;
+  }
+
+  article {
+    @apply flex flex-col md:flex-row justify-between items-center gap-10;
+  }
+
+  article div {
+    @apply max-w-[17rem] border  border-white py-3 px-4 text-sm relative;
+  }
+
+  .good-icon {
+    @apply text-3xl text-white absolute z-40 -top-4 left-1/2;
+  }
+
+  .event-container {
+    @apply flex flex-col lg:flex-row lg:items-center lg:justify-between mx-auto space-y-2  w-[80%] pb-6 px-5;
+  }
+
+  .event-carousel-text {
+    @apply text-black pr-6 py-6 space-y-3 max-w-md text-lg;
+  }
+
+  .event-readmore {
+    @apply inline-flex items-center mt-4 px-3 py-2 text-sm font-medium text-center
+    text-white bg-fuchsia-700  hover:bg-fuchsia-800 focus:ring-4 focus:outline-none focus:ring-fuchsia-300;
+  }
+
+  .faq-items {
+    @apply max-w-6xl md:mx-auto flex justify-center items-center md:grid md:grid-cols-2 md:grid-rows-2 gap-y-10 flex-col md:place-items-center;
+  }
+}
+
+header.gradient-bg {
+  clip-path: polygon(0% 0%, 100% 1%, 100% 87%, 0% 100%);
+  background: conic-gradient(
+    from 183.3deg at 20.94% 23.57%,
+    #5c04fd -160.22deg,
+    rgba(92, 4, 254, 0.514741) 9.37deg,
+    rgba(92, 4, 254, 0.508035) 29.82deg,
+    rgba(93, 3, 255, 0) 163.55deg,
+    #5c04fd 199.78deg,
+    rgba(92, 4, 254, 0.514741) 369.37deg
+  );
+}
